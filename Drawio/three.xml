@@ -1,0 +1,56 @@
+<mxfile host="app.diagrams.net" modified="2025-04-09T15:30:00.000Z" agent="Mozilla/5.0 (Windows)" etag="tree123" version="16.0.6" type="device">
+  <diagram id="treeForms" name="Дерево форм">
+    <mxGraphModel dx="824" dy="400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1333" pageHeight="750">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Главное окно конфигуратора -->
+        <mxCell id="form1" value="Главное окно конфигуратора" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#003366;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="500" y="50" width="200" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Окно выбора компонентов -->
+        <mxCell id="form2" value="Окно выбора компонентов" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#003366;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="250" y="180" width="200" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Окно просмотра 3D-модели -->
+        <mxCell id="form3" value="Окно просмотра 3D-модели" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#003366;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="500" y="180" width="200" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Окно настроек/фильтров -->
+        <mxCell id="form4" value="Окно настроек/фильтров" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#003366;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="750" y="180" width="200" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Окно заказа -->
+        <mxCell id="form5" value="Окно оформления заказа" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeColor=#003366;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="500" y="310" width="200" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Соединительные линии -->
+        <!-- Из главного окна к окну выбора компонентов -->
+        <mxCell id="conn1" value="Переход" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#003366;endArrow=block;fontSize=10;" edge="1" parent="1" source="form1" target="form2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Из главного окна к окну просмотра 3D-модели -->
+        <mxCell id="conn2" value="Переход" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#003366;endArrow=block;fontSize=10;" edge="1" parent="1" source="form1" target="form3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Из главного окна к окну настроек/фильтров -->
+        <mxCell id="conn3" value="Переход" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#003366;endArrow=block;fontSize=10;" edge="1" parent="1" source="form1" target="form4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <!-- Из окна просмотра 3D-модели к окну оформления заказа -->
+        <mxCell id="conn4" value="Переход" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#003366;endArrow=block;fontSize=10;" edge="1" parent="1" source="form3" target="form5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.9">
+  <diagram id="archDiagram" name="Advanced Architecture Diagram">
+    <mxGraphModel dx="1132" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1333" pageHeight="750" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="db" value="MS SQL Server&#xa;(База данных)" style="shape=database;whiteSpace=wrap;html=1;strokeColor=#003366;fillColor=#ffffff;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="50" y="280" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="logger" value="Логирование/Обработка ошибок" style="shape=ellipse;whiteSpace=wrap;html=1;strokeColor=#003366;fillColor=#e6f2ff;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="50" y="150" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bl" value="Бизнес-логика" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;strokeColor=#003366;fillColor=#ffffff;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="300" y="240" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="validator" value="Валидатор данных" style="shape=rectangle;rounded=1;dashed=1;whiteSpace=wrap;html=1;strokeColor=#006600;fillColor=#f0fff0;fontSize=10;" parent="bl" vertex="1">
+          <mxGeometry x="20" y="20" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="adapter" value="Интеграционный адаптер" style="shape=rectangle;rounded=1;dashed=1;whiteSpace=wrap;html=1;strokeColor=#006600;fillColor=#f0fff0;fontSize=10;" parent="bl" vertex="1">
+          <mxGeometry x="20" y="80" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ui" value="WinForms&#xa;(UI)" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;strokeColor=#003366;fillColor=#ffffff;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="580" y="120" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="unity" value="Unity 3D&#xa;(Визуализация)" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;strokeColor=#003366;fillColor=#ffffff;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="580" y="360" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_log_bl" value="Логи событий" style="edgeStyle=orthogonalEdgeStyle;rounded=0;dashed=1;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;strokeColor=#003366;endArrow=block;fontSize=10;" parent="1" source="logger" target="bl" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn_bl_db_req" value="Данные" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.0;exitY=0.5;exitPerimeter=1;entryX=1;entryY=0.5;entryPerimeter=1;strokeColor=#003366;endArrow=block;fontSize=10;" parent="1" source="bl" target="db" edge="1">
+          <mxGeometry x="0.1096" y="5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_bl_ui" value="Запрос конфигурации" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.3;exitPerimeter=1;entryX=0;entryY=0.7;entryPerimeter=1;strokeColor=#003366;endArrow=block;fontSize=10;startArrow=block;startFill=1;" parent="1" source="bl" target="ui" edge="1">
+          <mxGeometry x="0.0118" y="-20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn_bl_unity" value="Данные для визуализации" style="edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.7;exitPerimeter=1;entryX=0;entryY=0.3;entryPerimeter=1;strokeColor=#003366;endArrow=block;fontSize=10;startArrow=block;startFill=1;" parent="1" source="bl" target="unity" edge="1">
+          <mxGeometry x="-0.1329" y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
