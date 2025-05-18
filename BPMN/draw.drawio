@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.6">
+  <diagram name="AS-IS Updated" id="0">
+    <mxGraphModel dx="1725" dy="928" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pool" value="" style="pool;horizontal=1;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry y="80" width="1800" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1" value="Клиент" style="swimlane;startSize=20;" parent="pool" vertex="1">
+          <mxGeometry width="1800" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="startEvent" value="Потребность в ПК" style="ellipse;whiteSpace=wrap;html=1;" parent="lane1" vertex="1">
+          <mxGeometry x="100" y="80" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="task1" value="Формулирует цель и бюджет" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane1" vertex="1">
+          <mxGeometry x="200" y="100" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="task2" value="Описывает предпочтения" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane1" vertex="1">
+          <mxGeometry x="380" y="100" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="msgFlow1" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=none;exitX=0.5;exitY=1;exitPerimeter=1;entryX=0.5;entryY=0;entryPerimeter=1;" parent="lane1" source="task2" target="receiveRequest" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway1" value="Требования согласованы?" style="rhombus;whiteSpace=wrap;html=1;" parent="lane1" vertex="1">
+          <mxGeometry x="620" y="300" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="task8" value="Изучает предложенный вариант" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane1" vertex="1">
+          <mxGeometry x="1050" y="300" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="boundaryTimer" value="" style="boundaryEvent;timer=1;whiteSpace=wrap;html=1;" parent="task8" vertex="1">
+          <mxGeometry x="180" y="-40" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway3" value="Устраивает ли сборка?" style="rhombus;whiteSpace=wrap;html=1;" parent="lane1" vertex="1">
+          <mxGeometry x="1300" y="300" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="endOK" value="Сборка утверждена" style="ellipse;whiteSpace=wrap;html=1;" parent="lane1" vertex="1">
+          <mxGeometry x="1500" y="300" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="endErr" value="Конфигурация не утверждена" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#d9534f;" parent="lane1" vertex="1">
+          <mxGeometry x="1500" y="400" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="msgFlow2" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=none;" parent="lane1" source="sendClarified" target="receiveClarified" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="receiveClarified" value="Получает уточнённые требования" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane1" vertex="1">
+          <mxGeometry x="380" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dataSpec" value="Спецификация" style="text;html=1;strokeColor=none;fillColor=none;" parent="lane1" vertex="1">
+          <mxGeometry x="900" y="300" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" value="Менеджер" style="swimlane;startSize=20;" parent="pool" vertex="1">
+          <mxGeometry y="200" width="1800" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="receiveRequest" value="Получает запрос" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2" vertex="1">
+          <mxGeometry x="380" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="task3" value="Фиксирует параметры запроса" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2" vertex="1">
+          <mxGeometry x="200" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="task4" value="Уточняет требования" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2" vertex="1">
+          <mxGeometry x="20" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sendClarified" value="Отправляет уточнённые требования" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2" vertex="1">
+          <mxGeometry x="200" y="300" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="subProcess" value="Поиск комплектующих вручную" style="rounded=1;whiteSpace=wrap;html=1;marker=2;" parent="lane2" vertex="1">
+          <mxGeometry x="200" y="400" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="task5" value="Проверяет совместимость вручную" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#e69a00;" parent="lane2" vertex="1">
+          <mxGeometry x="450" y="400" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway2" value="Найдены конфликты?" style="rhombus;whiteSpace=wrap;html=1;" parent="lane2" vertex="1">
+          <mxGeometry x="650" y="400" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="task6" value="Формирует спецификацию" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2" vertex="1">
+          <mxGeometry x="850" y="400" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="task7" value="Передаёт клиенту сборку" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2" vertex="1">
+          <mxGeometry x="1050" y="400" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3" value="Внешние источники" style="swimlane;startSize=20;" parent="pool" vertex="1">
+          <mxGeometry y="400" width="1800" height="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
